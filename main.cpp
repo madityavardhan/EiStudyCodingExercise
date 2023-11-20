@@ -182,12 +182,12 @@ private:
 
     Memento saveState() {
         undoStack.push(Memento(tasks));
-        redoStack = std::stack<Memento>(); // Clear redo stack
+        redoStack = std::stack<Memento>(); 
         return Memento(tasks);
     }
 };
 
-// Function to display the menu and get user input
+
 char displayMenuAndGetChoice() {
     std::cout << "\n===== ToDo List Manager =====\n"
               << "1. Add Task\n"
@@ -201,7 +201,7 @@ char displayMenuAndGetChoice() {
 
     char choice;
     std::cin >> choice;
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Clear input buffer
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     return choice;
 }
 
